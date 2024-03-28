@@ -23,10 +23,10 @@ class Triangulo:
         """
         Verifica se o triângulo é escaleno (três lados diferentes).
         """
-        return self.validar_forma() and self.a != self.b != self.c
+        return self.validar_forma() and self.a != self.b and self.b != self.c and self.c != self.a
 
     def eh_isosceles(self):
         """
         Verifica se o triângulo é isósceles (dois lados iguais).
         """
-        return not self.eh_escaleno
+        return not self.eh_escaleno()
